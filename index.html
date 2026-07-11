@@ -27,9 +27,10 @@
 
     <div id="petals-container" class="fixed inset-0 pointer-events-none z-10"></div>
 
-    <audio id="mom-birthday-song" loop>
-        <source src="mom-song.mp3" type="audio/mp3">
-    </audio>
+    <!-- Hidden Video Player used as Audio Source for MP4 -->
+    <video id="mom-birthday-song" loop class="hidden" playsinline>
+        <source src="mom-song.mp4" type="video/mp4">
+    </video>
 
     <div class="fixed top-5 right-5 z-50">
         <button onclick="toggleMusic()" id="music-btn" class="w-12 h-12 rounded-full bg-white border border-pink-200 text-pink-400 flex items-center justify-center shadow-md active:scale-95 transition-all duration-300">
@@ -43,7 +44,7 @@
         <div class="absolute bottom-20 right-10 w-72 h-72 bg-pink-100/60 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="z-20 max-w-md">
-            <span class="text-xs font-bold uppercase tracking-widest text-pink-400 block mb-3">To The Woman Who Holds My Heart</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-pink-400 block mb-3">To The Woman Who Holds a great Heart</span>
             <h1 class="font-serif text-4xl md:text-5xl font-semibold text-zinc-800 leading-tight">Happy Birthday, Mom!</h1>
             <p class="font-royal text-4xl text-amber-500 mt-2">You are my greatest blessing</p>
             
@@ -94,7 +95,7 @@
                 <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center text-amber-600 shrink-0 text-sm"><i class="fa-solid fa-sun"></i></div>
                 <div>
                     <h3 class="font-serif font-semibold text-zinc-800 text-base">My Guiding Light</h3>
-                    <p class="text-xs text-zinc-400 mt-1">Your advice and grace have shaped the person I am today.</p>
+                    <p class="text-xs text-zinc-400 mt-1">Your advice and grace shaped the person.</p>
                 </div>
             </div>
         </div>
@@ -113,8 +114,15 @@
         let isPlaying = false;
 
         function toggleMusic() {
-            if (isPlaying) { songNode.pause(); iconNode.className = "fa-solid fa-music text-lg"; isPlaying = false; }
-            else { songNode.play().catch(e => console.log("Audio locked.")); iconNode.className = "fa-solid fa-pause text-lg animate-pulse"; isPlaying = true; }
+            if (isPlaying) { 
+                songNode.pause(); 
+                iconNode.className = "fa-solid fa-music text-lg"; 
+                isPlaying = false; 
+            } else { 
+                songNode.play().catch(e => console.log("Audio locked.")); 
+                iconNode.className = "fa-solid fa-pause text-lg animate-pulse"; 
+                isPlaying = true; 
+            }
         }
 
         document.body.addEventListener('click', () => { if (!isPlaying) toggleMusic(); }, { once: true });
@@ -135,5 +143,4 @@
         generatePetals();
     </script>
 </body>
-              </html>
-              
+</html>
