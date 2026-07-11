@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Mom! 🌸✨</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background: linear-gradient(to bottom, #fff5f5, #ffffff, #fffdf0); }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-royal { font-family: 'Alex Brush', cursive; }
+        .petal { position: fixed; pointer-events: none; z-index: 10; animation: fadeFloat 7s linear infinite; }
+        @keyframes fadeFloat {
+            0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(110vh) translateX(50px) rotate(180deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="text-zinc-700 overflow-x-hidden antialiased">
+
+    <div id="petals-container" class="fixed inset-0 pointer-events-none z-10"></div>
+
+    <audio id="mom-birthday-song" loop>
+        <source src="mom-song.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="fixed top-5 right-5 z-50">
+        <button onclick="toggleMusic()" id="music-btn" class="w-12 h-12 rounded-full bg-white border border-pink-200 text-pink-400 flex items-center justify-center shadow-md active:scale-95 transition-all duration-300">
+            <i id="music-icon" class="fa-solid fa-music text-lg animate-pulse"></i>
+        </button>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-yellow-100/50 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-20 right-10 w-72 h-72 bg-pink-100/60 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="z-20 max-w-md">
+            <span class="text-xs font-bold uppercase tracking-widest text-pink-400 block mb-3">To The Woman Who Holds My Heart</span>
+            <h1 class="font-serif text-4xl md:text-5xl font-semibold text-zinc-800 leading-tight">Happy Birthday, Mom!</h1>
+            <p class="font-royal text-4xl text-amber-500 mt-2">You are my greatest blessing</p>
+            
+            <div class="mt-8 inline-block animate-bounce">
+                <a href="#scroll-start" class="w-10 h-10 rounded-full bg-white border border-pink-100 shadow-sm flex items-center justify-center text-pink-400 text-sm">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <main id="scroll-start" class="max-w-md mx-auto px-6 pb-24 space-y-16 relative z-20">
+
+        <!-- IMAGE SECTION -->
+        <div class="bg-white p-4 rounded-3xl border border-pink-100/50 shadow-xl shadow-pink-100/30 text-center">
+            <div class="overflow-hidden rounded-2xl bg-zinc-50 border border-zinc-100 relative">
+                <img src="mom.jpg" alt="Dearest Mom" class="w-full h-80 object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+            <p class="font-serif italic text-sm text-zinc-500 mt-4 px-2">"Life brought us together, and I found a mother in you..." ✨</p>
+        </div>
+
+        <!-- MESSAGE -->
+        <div class="text-center space-y-4 px-2">
+            <div class="w-8 h-[1px] bg-amber-400 mx-auto"></div>
+            <h2 class="font-serif text-2xl font-medium text-zinc-800">You Mean Everything</h2>
+            <p class="text-sm text-zinc-500 leading-relaxed font-light">
+                They say family is what you are born into, but I believe family is what you choose. Thank you for choosing to love me, for guiding me with your wisdom, and for being the comfort I never knew I needed.
+            </p>
+            <p class="text-sm text-zinc-500 leading-relaxed font-light">
+                May your day be as beautiful as the kindness you show to everyone around you. I love you more than words can say.
+            </p>
+            <div class="w-8 h-[1px] bg-amber-400 mx-auto mt-2"></div>
+        </div>
+
+        <!-- CARDS -->
+        <div class="space-y-4">
+            <div class="bg-gradient-to-br from-white to-pink-50/20 p-5 rounded-2xl border border-pink-100/40 shadow-sm flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center text-pink-500 shrink-0 text-sm"><i class="fa-solid fa-heart"></i></div>
+                <div>
+                    <h3 class="font-serif font-semibold text-zinc-800 text-base">A Bond Beyond Blood</h3>
+                    <p class="text-xs text-zinc-400 mt-1">Our connection is a gift I cherish every single day.</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-white to-yellow-50/20 p-5 rounded-2xl border border-yellow-100/30 shadow-sm flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center text-amber-600 shrink-0 text-sm"><i class="fa-solid fa-sun"></i></div>
+                <div>
+                    <h3 class="font-serif font-semibold text-zinc-800 text-base">My Guiding Light</h3>
+                    <p class="text-xs text-zinc-400 mt-1">Your advice and grace have shaped the person I am today.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center bg-white p-6 rounded-3xl border border-yellow-100 shadow-xl shadow-yellow-50 relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-yellow-100/40 rounded-full blur-xl"></div>
+            <i class="fa-solid fa-cake-candles text-amber-400 text-3xl mb-2"></i>
+            <h4 class="font-serif font-bold text-zinc-800 text-lg">Happy Birthday, Mom!</h4>
+            <p class="text-xs text-zinc-400 mt-1">Stay blessed and beautiful always. ♥️</p>
+        </div>
+    </main>
+
+    <script>
+        const songNode = document.getElementById('mom-birthday-song');
+        const iconNode = document.getElementById('music-icon');
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) { songNode.pause(); iconNode.className = "fa-solid fa-music text-lg"; isPlaying = false; }
+            else { songNode.play().catch(e => console.log("Audio locked.")); iconNode.className = "fa-solid fa-pause text-lg animate-pulse"; isPlaying = true; }
+        }
+
+        document.body.addEventListener('click', () => { if (!isPlaying) toggleMusic(); }, { once: true });
+
+        function generatePetals() {
+            const container = document.getElementById('petals-container');
+            const items = ['<span class="text-pink-200/60">🌸</span>', '<span class="text-white">✨</span>', '<span class="text-yellow-200/50">♥</span>'];
+            setInterval(() => {
+                const petal = document.createElement('div'); petal.classList.add('petal');
+                petal.innerHTML = items[Math.floor(Math.random() * items.length)];
+                petal.style.left = Math.random() * 100 + 'vw';
+                petal.style.fontSize = (Math.random() * 12 + 10) + 'px';
+                petal.style.animationDuration = (Math.random() * 2 + 5) + 's';
+                container.appendChild(petal);
+                setTimeout(() => petal.remove(), 7000);
+            }, 1800);
+        }
+        generatePetals();
+    </script>
+</body>
+              </html>
+              
